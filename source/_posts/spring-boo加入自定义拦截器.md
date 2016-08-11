@@ -12,7 +12,7 @@ HandlerInterceptor 的功能跟过滤器类似，但是提供更精细的的控�
 
 下面是实现过程：
 ## 创建我们自己的拦截器类并实现 HandlerInterceptor 接口。
-```bash
+```java
 package com.dison.spring.boot.interceptor;
 
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -71,7 +71,7 @@ public class SpringMvcInterceptor implements HandlerInterceptor {
 }
 ```
 ## 创建一个Java类继承WebMvcConfigurerAdapter，并重写 addInterceptors 方法。并实例化我们自定义的拦截器，然后将对像手动添加到拦截器链中（在addInterceptors方法中添加）
-```bash
+```java
 package com.dison.spring.boot.interceptor;
 
 import org.springframework.context.annotation.Configuration;
