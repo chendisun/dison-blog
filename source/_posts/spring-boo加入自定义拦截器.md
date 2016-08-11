@@ -6,7 +6,7 @@ tags:
 - Java
 ---
 
-使用spring-boot做Web开发中，我们除了使用 Filter 来过滤请web求外，还可以使用Spring提供的HandlerInterceptor（拦截器）。
+使用spring-boot做Web开发中，我们除了使用 Filter 来过滤请求外，还可以使用Spring提供的HandlerInterceptor（拦截器）。
 <!--more-->
 HandlerInterceptor 的功能跟过滤器类似，但是提供更精细的的控制能力：在request被响应之前、request被响应之后、视图渲染之前以及request全部结束之后。我们不能通过拦截器修改request内容，但是可以通过抛出异常（或者返回false）来暂停request的执行。
 
