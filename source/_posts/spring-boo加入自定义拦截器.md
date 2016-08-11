@@ -23,11 +23,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 自定义spring-mvc拦截器
- *
- * @author dison
- * @date 16/8/11
- * @company 广州易站通计算机科技有限公司
- * @email chends@gzyitop.com
  */
 public class SpringMvcInterceptor implements HandlerInterceptor {
     /**
@@ -84,10 +79,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * @author dison
- * @date 16/8/11
- * @company 广州易站通计算机科技有限公司
- * @email chends@gzyitop.com
+ *
  */
 @Configuration
 public class WebAppConfigurer extends WebMvcConfigurerAdapter {
