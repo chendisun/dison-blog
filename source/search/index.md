@@ -3,5 +3,4 @@ title: RESULT
 toc: false
 comments: false
 ----
-<div id="st-results-container">
-</div>
+<div class="st-search-container"></div>
