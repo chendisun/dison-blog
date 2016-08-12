@@ -1,6 +1,7 @@
 title: spring-boot使用
 date: 2016-08-10 20:22:25
 categories:
+toc: true
 - 学习
 tags:
 - Java
