@@ -21,10 +21,12 @@
       <% } %>
     <% } %>
     <div class="article-entry" itemprop="articleBody">
-      <% if (post.excerpt && index){ %>
-        <%- post.excerpt %>
-      <% } else { %>
-        <%- post.content %>
+      <% if (item.excerpt && index){ %>   
+        <%- item.excerpt %>
+      <% } else { if (post.toc == true) {%>  
+        <%- partial('post/toc') %>
+      <% } %>
+        <%- item.content %>
       <% } %>
     </div>
     <% if (index){ %>
