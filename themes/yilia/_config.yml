@@ -57,3 +57,7 @@ friends:
 #aboutme: false
 #开启——
 aboutme: 我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的it民工…
+
+#开启站内搜索
+swift_search:
+  enable: true
