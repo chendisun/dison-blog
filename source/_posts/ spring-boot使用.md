@@ -12,7 +12,7 @@ tags:
 ## 工程的结构，使用maven java工程
 ![](http://120.24.60.216:4000/img/20160810202223.png)
 
-## 添加工程依赖的mvnbao
+## 添加工程依赖的mvn包
 
 ```bash
         <dependency>
