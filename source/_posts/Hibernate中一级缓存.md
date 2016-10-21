@@ -28,6 +28,16 @@ tags:
 
 
 ## 一级缓存的管理
+1.当应用程序调用Session的save()、update()、savaeOrUpdate()、get()或load()，以及调用查询接口的 list()、iterate()或filter()方法时，如果在Session缓存中还不存在相应的对象，Hibernate就会把该对象加入到第一级缓存中。当清理缓存时，Hibernate会根据缓存中对象的状态变化来同步更新数据库。Session为应用程序提供了两个管理缓存的方法： evict(Object obj)：从缓存中清除参数指定的持久化对象。 clear()：清空缓存中所有持久化对象。
+2.save、update、saveOrupdate、load、list、iterate、lock会向一级缓存存放数据。
+3.什么操作会从一级缓存取数据：get、load、list、get/load会首先从一级缓存中取，如没有.再有不同的操作get会立即向数据库发请求，而load会返回一个代理对象，直到用户真的去使用数据，才会向数据库发请求；
+我们知道 query.list() query.uniueResut() 不会从一级缓取数据! 但是query.list 或者query.uniqueRestu() 会向一级缓存放数据的.
+
+> 注意：
+> ① 一级缓存不需要配置，就可以使用,它本身没有保护机制，所以我们程序员要考虑这个问题,我们可以同 evict 或者 clear来清除session缓存中对象. evict是清除一个对象，clear是清除所有的sesion缓存对象
+> ② session级缓存中对象的生命周期, 当session关闭后，就自动销毁.
+> ③ 我们自己用HashMap来模拟一个Session缓存，加深对缓存的深入.
 
 
-转发表明出处，谢谢！
+原文来自：http://blog.csdn.net/xlgen157387/article/details/40071651
+
